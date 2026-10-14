@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-emerald-deep: #052018;
+    --bg-emerald-dark: #082d22;
+    --bg-emerald-card: #0a382a;
+    --gold-primary: #D4AF37;
+    --gold-light: #F3DC8A;
+    --gold-pale: #FFF6D8;
+    --gold-dark: #B8922A;
+    --text-ivory: #FFF6D8;
+    --text-muted: #9DB8AD;
+  }
+}
+
+/* Custom Scrollbar for Luxury Aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #052018;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F3DC8A;
+}
+
+/* Subtle Arabesque Lattice Pattern Background */
+.arabesque-bg {
+  background-color: #052018;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.12) 0%, transparent 60%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44'%3E%3Cpath d='M22 2 L28 14 L40 8 L34 21 L42 22 L34 23 L40 36 L28 30 L22 42 L16 30 L4 36 L10 23 L2 22 L10 21 L4 8 L16 14 Z' fill='none' stroke='%23D4AF37' stroke-width='0.75' stroke-opacity='0.12'/%3E%3C/svg%3E");
+}
+
+.gold-gradient-border {
+  border-image: linear-gradient(135deg, #F3DC8A, #D4AF37, #99781B) 1;
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.22);
+}
+
+.gold-text-gradient {
+  background: linear-gradient(135deg, #FFF6D8 0%, #F3DC8A 45%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

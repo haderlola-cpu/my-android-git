@@ -1,22 +1,61 @@
-<div style="text-align: center;">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# البيت العربي | elbeit elaraby
+## نظام إدارة دعوات الحفلات بالباركود QR وتسجيل حضور الضيوف
 
-# Run and deploy your AI Studio app
+تطبيق ويب حديث مبني بتقنية **React + TypeScript + Tailwind CSS + Vite**، مخصص لشركة **البيت العربي (elbeit elaraby)** لإدارة حفلات الزفاف والمناسبات الفاخرة، وتوليد بطاقات الدعوة المخصصة بباركود QR فريد لكل ضيف، وفحص وتسجيل الحضور بالباب لحظياً عبر الكاميرا مع دعم كامل للمزامنة والعمل دون اتصال بالإنترنت (Offline-First).
 
-This contains everything you need to run your app locally.
+---
 
-View your app in [AI Studio](https://ai.studio/apps/0095e085-5ee6-4014-abbb-c5723dcded00).
+## الميزات الرئيسية (Core Features)
 
-## Run Locally
+1. **لوحة التحكم المتقدمة (Dashboard):**
+   - مؤشر دائري ذهبي تفاعلي لحالة ونسبة حضور المناسبة القادمة مع عد تنازلي بالأيام.
+   - بطاقات إحصائية للمناسبات، إجمالي المدعوين، والحاضرين بالفعل.
+   - إجراءات سريعة: إنشاء مناسبة جديدة، مسح سريع بالباركود.
+   - قائمة المناسبات القادمة مع بطاقات تقويم وتفاصيل فورية.
 
-**Prerequisites:** [Android Studio](https://developer.android.com/studio)
+2. **استوديو تصميم الدعوات (Invitation Designer):**
+   - محاكي بطاقة تفاعلي بنسبة بطاقات الدعوة الفاخرة (5:7).
+   - إمكانية سحب العناصر (الباركود، اسم المدعو، التاريخ) مباشرة بالإصبع أو الماوس لضبط مواقعها بدقة، مع أشرطة تحكم بالإحداثيات والأحجام.
+   - 6 خلفيات ملكية جاهزة بتدرجات الأوبسيديان والذهب والزمرد والجمشت، بالإضافة لإمكانية رفع صورة خلفية مخصصة.
+   - اختيار ألوان النصوص والباركود، و8 خطوط عربية ولاتينية راقية (القاهرة، أميري، تجول، المراعي، تشانجا، بلايفير، مونتسيرات، الخط الديواني الاحتفالي).
+   - تضمين باركود موقع القاعة لخرائط جوجل (Google Maps QR).
 
-1. Open Android Studio.
-2. Select **Open** and choose the directory containing this project.
-3. Allow Android Studio to fix any incompatibilities as it imports the project.
-4. Create a file named `.env` in the project directory and set `GEMINI_API_KEY` in that file to your Gemini API key (see [`.env.example`](.env.example) for an example).
-5. Remove this line from the app's `build.gradle.kts` file: `signingConfig = signingConfigs.getByName("debugConfig")`.
-6. Run the app on an emulator or physical device.
-7. If you have already published your app in AI Studio, please [request upload key reset](https://support.google.com/googleplay/android-developer/answer/9842756#zippy=%2Crequest-an-upload-key-reset) in Google Play Console.
+3. **إدارة تفاصيل المناسبة والضيوف (Event & Guest Management):**
+   - إضافة الضيوف بـ 3 طرق مرنة: (بالأسماء وأرقام الهاتف، تسلسل أرقام طاولات، أو أرقام موبايل مجردة) مع منع التكرار الذكي.
+   - توليد كود باركود 8 أرقام فريد لكل ضيف بصيغة `eb:{eventId}:{code}`.
+   - فلاتر سريعة للضيوف: الكل، الحاضرون، في الانتظار، تم الإرسال واتساب.
+   - وضع التحديد المتعدد للحذف الجماعي أو التنزيل.
+   - تنزيل بطاقات الدعوة بصيغة PNG عالية الدقة فردياً، أو أرشيف مضغوط ZIP لجميع الضيوف دفعة واحدة.
+   - تصدير كشف الحضور كاملاً إلى ملف Excel / CSV.
 
+4. **المسح الذكي عند الباب (Door Barcode Scanner):**
+   - مسح فوري عبر كاميرا الجهاز بكشف مباشر لكود QR مع إمكانية الإدخال اليدوي.
+   - مؤثرات صوتية احترافية عبر Web Audio API:
+     - نغمة ترحيب ثلاثية ذهبية + احتفال كونفيتي عند الدخول الناجح.
+     - تنبيه تحذيري عند تكرار الدخول (منع الدخول مرتين مع عرض وقت الدخول الأول).
+     - تنبيه خطأ للدعوات التابعة لمناسبات أخرى أو الأكواد غير الصالحة.
+   - وضع المسح المستمر لإعادة تفعيل الكاميرا تلقائياً.
+
+5. **الإرسال المتتابع عبر واتساب (Sequential WhatsApp Dispatch):**
+   - إرسال متتابع للضيوف مع تعبئة المتغيرات تلقائياً (`{name}`, `{event}`, `{date}`, `{time}`, `{code}`, `{venue}`).
+
+6. **وضع طاقم الاستقبال / البوابة (Reception Mode):**
+   - واجهة مخصصة وسريعة لموظفي الباب مع التركيز على الكاميرا والبحث السريع والعدّاد اللحظي.
+
+7. **النسخ الاحتياطي واللغات (Backup & Internationalization):**
+   - دعم كامل للغتين العربية (RTL) والإنجليزية (LTR).
+   - تصدير واستعادة نسخة احتياطية محلية كاملة بصيغة JSON بأمان مع دمج البيانات دون حذفها.
+
+---
+
+## التشغيل محلياً (Run Locally)
+
+```bash
+# تثبيت الاعتمادات
+npm install
+
+# تشغيل خادم التطوير
+npm run dev
+```
+
+يعمل التطبيق على المنفذ `3000` على الرابط: `http://localhost:3000`.
