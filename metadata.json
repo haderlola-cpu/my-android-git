@@ -1,0 +1,8 @@
+{
+  "name": "elbeit elaraby",
+  "description": "تطبيق أندرويد لإدارة دعوات الحفلات بالباركود QR وتسجيل حضور الضيوف لشركة elbeit elaraby.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">elbeit elaraby</string>
+    <string name="app_subtitle_ar">تنظيم الحفلات والمناسبات</string>
+    <string name="app_subtitle_en">Event &amp; Party Planning</string>
+    <string name="login_title_ar">تسجيل الدخول</string>
+    <string name="login_title_en">Sign In</string>
+    <string name="username_label_ar">اسم المستخدم</string>
+    <string name="username_label_en">Username</string>
+    <string name="password_label_ar">كلمة المرور</string>
+    <string name="password_label_en">Password</string>
+</resources>

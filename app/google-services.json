@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "383332361591",
+    "project_id": "main-composite-388217",
+    "storage_bucket": "main-composite-388217.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:383332361591:android:a4425b7d7c1ec177da6d72",
+        "android_client_info": {
+          "package_name": "com.aistudio.elbeitelaraby.kxmpzq"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "383332361591-j7hq8fkbjll5ssup7p6gfhciultpbih8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiHqXyeqtWdQ_kdYM0T7bkBlohmITB4KQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "383332361591-j7hq8fkbjll5ssup7p6gfhciultpbih8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
